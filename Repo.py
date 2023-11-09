@@ -39,7 +39,7 @@ class Repo:
 
   @property
   def diff(self):
-    for line in self.git.diff().split('\n'):
+    for line in self.repo.git.diff().split('\n'):
         if line.startswith('+'):
             print(colorama.Fore.GREEN)
         if line.startswith('-'):
