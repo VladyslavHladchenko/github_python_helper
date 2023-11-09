@@ -35,7 +35,7 @@ class Repo:
     self.repo.index.commit(commit_message)
 
     push_result = self.repo.remote(name='origin').push()
-    print('pushed.',**push_result)
+    print('pushed.',*map(str,push_result))
 
   @property
   def diff(self):
