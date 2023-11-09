@@ -41,8 +41,8 @@ class Repo:
   def diff(self):
     for line in self.repo.git.diff().split('\n'):
         if line.startswith('+'):
-            print(colorama.Fore.GREEN)
+            print(colorama.Fore.GREEN,end='')
         if line.startswith('-'):
-            print(colorama.Fore.RED)
+            print(colorama.Fore.RED,end='')
         print(line)
-        print(colorama.Style.RESET_ALL)
+        print(colorama.Style.RESET_ALL,end='')
